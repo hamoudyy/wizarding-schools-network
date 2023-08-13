@@ -14,4 +14,8 @@ const db = new Sequelize(`postgres://localhost:5432/${pkg.name}`, {
   logging: false, // so we don't see all the SQL queries getting made
 });
 
-module.exports = db;
+module.exports = {
+
+db,
+Sequelize,
+};;
