@@ -1,7 +1,6 @@
 const { db } = require("./server/db");
 const { green, red } = require("chalk");
-
-// require your models here
+const { Student, WizardingSchool } = require('./server/db/index');
 
 // DUMMY CAMPUS DATA
 
@@ -147,8 +146,8 @@ const seed = async () => {
     await db.sync({ force: true });
 
     await Promise.all(
-      campuses.map((campus) => {
-        return Campuses.create(campus);
+      wizardingSchools..map((wizardingSchool) => {
+        return Campuses.create(wizardingSchool);
       })
     );
 
